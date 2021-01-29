@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Word Guess Games</title>
+        <link rel="icon" href="../images/noose.ico">
+        <link href="../styles.css" rel="stylesheet" type="text/css"
+    </head>
+    <body onload="loadData()">
+        <center>
+            <div class="divborder">
+                <h3 class="underline">Players ranked by total number of guesses</h3>
+                <p id="output"></p>
+                <script>
+                    function loadData()
+                    {
+                        var sOutput = "";
+                        // Get content from local storage and display in the p tag
+                        sOutput = localStorage.getItem("newOutput"); 
+                        document.getElementById("output").innerHTML = sOutput;
+                    }
+                </script>
+            </div>
+        </center>
+    </body>
+</html>

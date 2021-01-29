@@ -1,0 +1,61 @@
+.button {
+    background-color: #4c66af; 
+    border: none;
+    color: white;
+    padding: 7px 16px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    border-radius: 8px;
+    transition-duration: 0.3s;
+    border: 2px solid black;
+}
+
+.button:hover {
+    background-color: #a4b4e2;
+    transform: scale(1.1);
+}
+
+.header {
+    padding: 150px;
+    text-align: center;
+    background-image: url("images/80s_header.jpg");
+    color: white;
+    font-size: 60px;
+    margin-top: 0%; 
+    font-family: Arial, Helvetica, sans-serif;
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: black;
+}
+
+body {
+    background-image: url("images/backgruond-white.jpg");
+    font-family: Arial, Helvetica, sans-serif;
+    background-position: center;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.divborder {
+    border: solid 2px black;
+    margin-top: 10px;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 20px;
+    background-color: whitesmoke;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+input[type=text]:focus {
+    background-color: #e5ebfa;
+}
