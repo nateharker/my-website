@@ -23,6 +23,10 @@
   <link href="../styles/clean-blog.min.css" rel="stylesheet">
   <link href="../styles/mystyles.css" rel="stylesheet" type="text/css">
 
+  <!-- Slick -->
+  <link rel="stylesheet" type="text/css" href="../slick/slick.css"/>
+  <link rel="stylesheet" type="text/css" href="../slick/slick-theme.css"/>
+
 </head>
 
 <body>
@@ -82,21 +86,71 @@
   </header>
 
   <!-- Main Content -->
-  <div class="container">
+
+  <div class="mainbody">
+    <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+            <div class="div-styling div-transform">
+                <center>
+                    <h1>INTEX Fall 2020</h1>
+                </center>
+                <div class="slider-for">
+                    <div><img class="image-transform-none" src="../images/IAZ_1.png" alt="Home Page" height="350" style="margin: auto;"></div>
+                    <div><img class="image-transform-none" src="../images/IAZ_2.png" alt="View All" height="350" style="margin: auto;"></div>
+                    <div><img class="image-transform-none" src="../images/IAZ_3.png" alt="Volunteer Search" height="350" style="margin: auto;"></div>
+                    <div><img class="image-transform-none" src="../images/IAZ_4.png" alt="Add Volunteer" height="350" style="margin: auto;"></div>
+                    <div><img class="image-transform-none" src="../images/IAZ_5.png" alt="Edit Volunteer" height="350" style="margin: auto;"></div>
+                    <div><img class="image-transform-none" src="../images/IAZ_6.png" alt="Admin login" height="350" style="margin: auto;"></div>
+                </div>
+                <br>
+                <div class="slider-nav">
+                    <div><img class="image-transform-none" src="../images/IAZ_1.png" alt="Home Page" width="250" style="margin: auto;"></div>
+                    <div><img class="image-transform-none" src="../images/IAZ_2.png" alt="View All" width="250" style="margin: auto;"></div>
+                    <div><img class="image-transform-none" src="../images/IAZ_3.png" alt="Volunteer Search" width="250" style="margin: auto;"></div>
+                    <div><img class="image-transform-none" src="../images/IAZ_4.png" alt="Add Volunteer" width="250" style="margin: auto;"></div>
+                    <div><img class="image-transform-none" src="../images/IAZ_5.png" alt="Edit Volunteer" width="250" style="margin: auto;"></div>
+                    <div><img class="image-transform-none" src="../images/IAZ_6.png" alt="Admin login" width="250" style="margin: auto;"></div>
+                </div>
+                <p style="text-indent: 30px;">This project started as an assignement for my System Analysis and Design class for the IS program. We were supposed to find a system that could be improved in an organization then conduct a comprehensive analysis and create a formal proposal for improvements. We found a local non-profit, I Am Zambia, and saw many improvements that could be made to their volunteer onboarding process. We analyzed the current process and designed a new system that would be much simpler to use, while also saving them time and money. Though the project could have ended there, my group felt passionate enough about the cause that we decided to build a prototype recruiting website to show how the improvements we had proposed could be implemented.</p>
+                <div class="div-space-evenly">
+                    <div>
+                        <a class="btn btn-primary"  href="http://iamzambia.herokuapp.com/" target="blank">View Prototype</a><!--href="https://intex-bcr.herokuapp.com"-->
+                    </div>
+                    <div>
+                        <a class="btn btn-primary" href="contact.html" target="blank">Full project report</a>
+                    </div>
+                    <div>
+                        <a class="btn btn-primary" href="https://docs.google.com/presentation/d/1EQ04j8hXxK3pQCxinBtzrTKbRuQ2CKaerl5s_POkdXQ/edit?usp=sharing" target="blank">Project proposal</a>
+                    </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
-        <ul>
-          <li>
-              <a href="https://www.churchofjesuschrist.org/" target="blank" class="externallinks">The Church of Jesus Christ of Latter-day Saints</a>, <i>Volunteer Representative</i> (Oct 2016 - Oct 2018)        
-              <ul>
-                  <li>Taught Christian principles to hundreds of families and individuals and held free weekly English lessons for the community</li>
-                  <li>Led monthly regional conferences of 30+ volunteers which led to increased efficiency and volunteer success </li> 
-                  <li>Managed residency documentation, travel logistics and planned meetings for 260 volunteers as Executive Secretary </li> 
-              </ul>
+          <hr>
       </div>
     </div>
-  </div>
 
+    <div class="row">
+      <div class="col-lg-8 col-md-10 mx-auto">
+        <div class="div-styling div-transform">
+          <ul>
+            <li style="list-style:none;">
+                <a href="https://www.churchofjesuschrist.org/" target="blank" class="externallinks">The Church of Jesus Christ of Latter-day Saints</a>, <i>Volunteer Representative</i> (Oct 2016 - Oct 2018)    
+            </li>    
+            <ul>
+                <li>Taught Christian principles to hundreds of families and individuals and held free weekly English lessons for the community</li>
+                <li>Led monthly regional conferences of 30+ volunteers which led to increased efficiency and volunteer success </li> 
+                <li>Managed residency documentation, travel logistics and planned meetings for 260 volunteers as Executive Secretary </li> 
+            </ul>
+          </ul>
+        </div>
+      </div>
+    </div>
+  <!-- </div> -->
+  </div>
   <hr>
 
   <!-- Footer -->
@@ -142,6 +196,29 @@
 
   <!-- Custom scripts for this template -->
   <script src="../js/clean-blog.min.js"></script>
+
+  <!-- Slick JS -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script type="text/javascript" src="../slick/slick.min.js"></script>
+
+  <script type="text/javascript">
+      $('.slider-for').slick({
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          arrows: false,
+          fade: true,
+          asNavFor: '.slider-nav'
+          });
+          $('.slider-nav').slick({
+          slidesToShow: 3,
+          slidesToScroll: 1,
+          asNavFor: '.slider-for',
+          dots: true,
+          centerMode: true,
+          focusOnSelect: true
+      });
+  </script>
 
 </body>
 
